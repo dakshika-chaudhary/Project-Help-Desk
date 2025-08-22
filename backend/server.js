@@ -44,7 +44,12 @@ app.use("/api/feedbacks", feedbackRoutes);
 app.use("/api", agentsRoutes);
 app.use("/api/faqs", faqRoutes);
 
+
 const PORT = process.env.PORT || 5000;
+app.get("/", (req, res) => {
+  res.send("Help Desk API is running 🚀");
+});
+
 mongoose.connect(process.env.MONGO_URI)
 .then(()=>{
    console.log("MongoDB connected");
@@ -52,4 +57,5 @@ mongoose.connect(process.env.MONGO_URI)
 })
 .catch((err)=>{
     console.error("Mongo connection error:", err);
+
 })
