@@ -23,7 +23,7 @@ import faqRoutes from "./routes/faqRoutes.js";
 
 const allowedOrigins = [
   "http://localhost:3000",          // Local development
-  "https://complete-helpdesk.vercel.app",  // Vercel production URL
+  "https://project-help-desk-ocy7.vercel.app",  // Vercel production URL
  "https://project-help-desk.onrender.com"
 ];
 
@@ -60,4 +60,5 @@ mongoose.connect(process.env.MONGO_URI)
     console.error("Mongo connection error:", err);
 
 })
+
 
